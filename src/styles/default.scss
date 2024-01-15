@@ -1,0 +1,26 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+html,
+body,
+#root,
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    --background-primary-color: #181818;
+    --server-container-primary-color: #313131;
+    --dms-container-primary-color: #272727;
+    --message-primary-color: #777777;
+    --text-white: #fff;
+    --text-black: #000;
+    --server-popup-name-modal-background: #d4d4d4;
+}

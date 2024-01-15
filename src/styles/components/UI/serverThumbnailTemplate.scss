@@ -1,0 +1,69 @@
+@use "../../pages/chat.scss";
+
+.server {
+    width: 100%;
+    height: chat.$serverWidth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: rgba(194, 194, 194, 0.63);
+
+        & .server-icon-img {
+            border-radius: 16px;
+        }
+
+        & .server-icon::after {
+            opacity: 1;
+        }
+    }
+
+    &.active {
+        background-color: rgba(194, 194, 194, 0.63);
+
+        & .server-icon-img {
+            border-radius: 16px;
+        }
+    }
+}
+
+.server-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+
+    &::after {
+        content: attr(data-name);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        max-width: 200px;
+        height: 35px;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        left: 130%;
+        border-radius: 5px;
+        color: var(--text-black);
+        background-color: var(--server-popup-name-modal-background);
+        font-size: 15px;
+        opacity: 0;
+        z-index: 2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: .3s;
+    }
+}
+
+.server-icon-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    transition: .3s;
+}
